@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/*
+ * A print-catalogue palette: warm paper, ink, hairline rules, one earth
+ * accent. Chosen to read like a working tool rather than a landing page.
+ */
+@theme inline {
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+
+  --color-paper: #f6f3ed;
+  --color-raised: #fffdf9;
+  --color-ink: #17140f;
+  --color-ink-soft: #554e44;
+  --color-ink-faint: #8d857a;
+  --color-rule: #ddd5c8;
+  --color-rule-soft: #eae3d8;
+  --color-accent: #a8431c;
+  --color-accent-soft: #f2e3d9;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  /* Lenis drives scrolling, so the native smooth behaviour must stay off. */
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lenis needs these while it is running. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Indeterminate progress bar for the upload, which has no real percentage. */
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-raised);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/*
+ * Elements that animate in start hidden. If JavaScript never runs, or motion
+ * is switched off, this rule is overridden below so nothing stays invisible.
+ */
+[data-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
