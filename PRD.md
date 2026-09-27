@@ -38,7 +38,7 @@ The seller reviews the results on one screen and downloads what they need.
 
 ## Goals
 
-- A working live demo where anyone can upload a photo and see the full output.
+- A working app where anyone can upload a photo and see the full output.
 - Cloudinary doing real work at every step, not just storing a file.
 - A build that one person can finish and polish in the time available.
 
@@ -67,11 +67,10 @@ Out of scope for now (mention as future ideas in the README, do not build):
 - The product stays fully inside every crop, never cut off.
 - Title, description, and tags match the actual product in the photo.
 - Page loads fast and images are optimized.
-- Repo has a clear README, a live link, and a two to four minute demo video.
+- Repo has a clear README and a two to four minute demo video.
 
 ## Submission checklist (from the hackathon rules)
 
-- [ ] Live working demo link
 - [ ] Public GitHub repo with setup instructions
 - [ ] README covering the track, the problem, how Cloudinary is used, and how to test
 - [ ] Two to four minute demo video showing the product and the Cloudinary workflow

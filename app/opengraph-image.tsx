@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 
 /**
- * The card that shows when the demo link is pasted into a chat or a
- * submission form. Judges see this before they see the site.
+ * The card that shows when a link to the site is pasted into a chat or a
+ * submission form.
  *
  * Deliberately built from layout and colour only, with no web font fetch.
  * A font request that fails at render time would take the whole card down.

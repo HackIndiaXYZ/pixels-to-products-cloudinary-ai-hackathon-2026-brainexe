@@ -67,7 +67,7 @@ the browser asking for it.
 
 ## How to test it
 
-1. Open the live demo.
+1. Start the app locally (see below) and open <http://localhost:3000>.
 2. Drop in a product photo. A rough one against a messy background shows the
    most: the point is that it does not need to be a good photo.
 3. The clean shot appears with the background removed on white. Background

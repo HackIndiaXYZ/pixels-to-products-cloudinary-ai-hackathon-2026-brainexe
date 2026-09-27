@@ -7,7 +7,7 @@ import { useEffect } from "react";
  * Catches anything the result screen throws that is not a missing asset:
  * Cloudinary being unreachable, rate limiting, a bad API key in production.
  *
- * Without this a judge opening the live demo would get a raw stack trace.
+ * Without this the user would get a raw stack trace.
  */
 export default function Error({
   error,
