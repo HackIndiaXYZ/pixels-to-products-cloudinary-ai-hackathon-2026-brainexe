@@ -6,8 +6,6 @@ launch-ready images plus the words to list it with.
 **Track 1 — AI Media Pipelines.** Media goes in, Cloudinary does the work,
 useful output comes out.
 
-- Live demo: _add the Vercel URL here_
-- Demo video: _add the link here_
 
 ## The problem
 
